@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    height: 100vh; /* Задаем высоту равную 100% высоты экрана */
+    margin: 0; /* Убираем стандартные отступы браузера (твой margin-top тоже убираем) */
+    background-color: #f4f4f9; /* Приятный светло-серый фон страницы */
+    font-family: Roboto;/* Базовый шрифт без засечек */
+	line-height: 1.5;
+}
+
+/* Настройки для нашей главной карточки приложения */
+#base, #reg{
+    background-color: white;
+    padding: 30px; /* Внутренние отступы, чтобы элементам не было тесно */
+    border-radius: 12px; /* Скругляем углы карточки */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Добавляем легкую тень для объема */
+    width: 350px; /* Фиксируем ширину карточки */
+    
+    /* Делаем саму карточку тоже flex-контейнером, чтобы выстроить элементы внутри нее друг под другом */
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; /* Расстояние между элементами внутри карточки (между инпутом и кнопкой) */
+}
+
+/* Немного стилей для заголовка */
+#title, #filter{
+    margin: 0;
+    text-align: center;
+}
+
+/* Стили для поля ввода и кнопки */
+#task, #add , #email, #pass, #regBtn, #logBtn, #logOut{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+
+
+/* Выделяем кнопку */
+#add, #regBtn, #logBtn{
+    background-color: #4CAF50; /* Зеленый цвет кнопки */
+    color: white;
+    border: none;
+    cursor: pointer; /* Меняем курсор при наведении */
+    transition: 0.3s;
+}
+
+#logOut{
+    background-color: #d8a903; /* Зеленый цвет кнопки */
+    color: white;
+    border: none;
+    cursor: pointer; /* Меняем курсор при наведении */
+    transition: 0.3s;
+}
+
+#add:hover {
+    background-color: #45a049; /* Кнопка чуть темнеет при наведении */
+}
+
+#regBtn:hover {
+    background-color: #45a049; /* Кнопка чуть темнеет при наведении */
+}
+
+#logBtn:hover {
+    background-color: #45a049; /* Кнопка чуть темнеет при наведении */
+}
+
+#logOut:hover {
+    background-color: #d2691e; /* Кнопка чуть темнеет при наведении */
+}
+
+@media (max-width: 600px) {
+    #base {
+        padding: 15px;
+        width: 200px;
+    }
+}
+.task-item{
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#new{
+    display: flex;
+    gap: 5px;
+}
+
+.active-filter{
+    display: flex;
+    border-radius: 3px;
+    border: none;
+    background-color: #4CAF50;
+}

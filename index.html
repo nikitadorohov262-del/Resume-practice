@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+	<head>
+		<title>Дневник Задач</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+	<body>
+
+		<div id="authScreen">
+		<main id="reg">
+			<input type="email" id="email" placeholder="Электронная почта">
+			<input type="password" id="pass" placeholder="Пароль">
+			<button id="regBtn">Зарегестрироваться</button>
+			<button id="logBtn">Войти</button>
+		</main>
+		</div>
+
+		<div id="trackerScreen" style="display: none;">
+			<main id="base">
+				<h2 id="title"> Веб-Трекер</h2>
+				<input id="task" placeholder="Введите задачу сюда...">
+				<button id="add">Добавить задачу</button>
+				<h3 id="filter">Фильтр</h3>
+				<div id="new">
+				<button id="filter-all" class="active-filter">Все</button>
+				<button id="filter-active">Активные</button>
+				<button id="filter-completed">Завершенные</button>
+				</div>
+				<div id="loader" style="display: none; text-align: center;">Загрузка задача...</div>
+				<div id="container"></div>
+				<button id="logOut">Выйти из аккаунта</button>
+			</main>
+		</div>
+
+
+		<script src="script.js"></script>
+
+	</body>
+</html>
